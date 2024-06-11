@@ -187,7 +187,6 @@ var InstagramScraper = /** @class */ (function () {
                             }); })
                                 .catch(function (error) {
                                 helperFunctions_1.logger.error(error);
-                                process.exit(1);
                             })];
                     case 1:
                         _a.sent();
@@ -195,7 +194,6 @@ var InstagramScraper = /** @class */ (function () {
                     case 2:
                         error_2 = _a.sent();
                         helperFunctions_1.logger.error(error_2);
-                        process.exit(1);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];
                 }
@@ -274,7 +272,6 @@ var InstagramScraper = /** @class */ (function () {
                             }); })
                                 .catch(function (error) {
                                 helperFunctions_1.logger.error(error);
-                                process.exit(1);
                             })];
                     case 1:
                         _a.sent();
@@ -282,7 +279,6 @@ var InstagramScraper = /** @class */ (function () {
                     case 2:
                         error_3 = _a.sent();
                         helperFunctions_1.logger.error(error_3);
-                        process.exit(1);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];
                 }

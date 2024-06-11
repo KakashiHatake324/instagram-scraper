@@ -129,11 +129,9 @@ export class InstagramScraper {
         })
         .catch((error) => {
           logger.error(error);
-          process.exit(1);
         });
     } catch (error) {
       logger.error(error);
-      process.exit(1);
     }
   }
 
@@ -203,11 +201,9 @@ export class InstagramScraper {
         })
         .catch((error) => {
           logger.error(error);
-          process.exit(1);
         });
     } catch (error) {
       logger.error(error);
-      process.exit(1);
     }
   }
 }

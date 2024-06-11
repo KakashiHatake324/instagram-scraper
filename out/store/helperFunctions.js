@@ -36,10 +36,23 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.readCookies = exports.saveToCSV = exports.logger = exports.iterateDivClasses = void 0;
+exports.readCookies = exports.saveToCSV = exports.logger = exports.iterateDivClasses = exports.getUserInput = void 0;
 var winston = require("winston");
 var cheerio = require("cheerio");
 var fs = require("fs");
+function getUserInput(question) {
+    return new Promise(function (resolve, reject) {
+        process.stdout.write(question);
+        process.stdin.on("data", function (data) {
+            var input = data.toString().trim();
+            resolve(input);
+        });
+        process.stdin.on("error", function (err) {
+            reject(err);
+        });
+    });
+}
+exports.getUserInput = getUserInput;
 function iterateDivClasses(html) {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {

@@ -38,18 +38,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var helperFunctions_1 = require("./store/helperFunctions");
 var scraperClass_1 = require("./store/scraperClass");
-function getUserInput(question) {
-    return new Promise(function (resolve, reject) {
-        process.stdout.write(question);
-        process.stdin.on("data", function (data) {
-            var input = data.toString().trim();
-            resolve(input);
-        });
-        process.stdin.on("error", function (err) {
-            reject(err);
-        });
-    });
-}
+// start function
 function start() {
     return __awaiter(this, void 0, void 0, function () {
         var loginCookies, userName, scraper;
@@ -63,7 +52,7 @@ function start() {
                         process.exit(1);
                     }
                     helperFunctions_1.logger.info("Got your login cookies (total: ".concat(loginCookies.split(";").length));
-                    return [4 /*yield*/, getUserInput("Please enter the username: ")];
+                    return [4 /*yield*/, (0, helperFunctions_1.getUserInput)("Please enter the username: ")];
                 case 2:
                     userName = _a.sent();
                     helperFunctions_1.logger.info("Will scrape user: ".concat(userName));
