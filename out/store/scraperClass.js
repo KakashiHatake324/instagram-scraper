@@ -117,12 +117,12 @@ var InstagramScraper = /** @class */ (function () {
     };
     InstagramScraper.prototype.getFollowers = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var config, error_2;
+            var config, _a;
             var _this = this;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
+            return __generator(this, function (_b) {
+                switch (_b.label) {
                     case 0:
-                        _a.trys.push([0, 2, , 3]);
+                        _b.trys.push([0, 2, , 5]);
                         if (this.currentIndex === undefined) {
                             return [2 /*return*/];
                         }
@@ -172,12 +172,15 @@ var InstagramScraper = /** @class */ (function () {
                                                 });
                                             }
                                             helperFunctions_1.logger.info("Current Index: ".concat(this.currentIndex, " - Scraped Followers: ").concat(this.followers.length));
-                                            if (!(this.currentIndex != 0)) return [3 /*break*/, 2];
-                                            return [4 /*yield*/, this.getFollowers()];
+                                            if (!(this.currentIndex != 0)) return [3 /*break*/, 3];
+                                            return [4 /*yield*/, (0, helperFunctions_1.delay)(1500)];
                                         case 1:
                                             _b.sent();
-                                            _b.label = 2;
+                                            return [4 /*yield*/, this.getFollowers()];
                                         case 2:
+                                            _b.sent();
+                                            _b.label = 3;
+                                        case 3:
                                             if (this.currentIndex === undefined) {
                                                 return [2 /*return*/];
                                             }
@@ -185,29 +188,47 @@ var InstagramScraper = /** @class */ (function () {
                                     }
                                 });
                             }); })
-                                .catch(function (error) {
-                                helperFunctions_1.logger.error(error);
-                            })];
+                                .catch(function (e) { return __awaiter(_this, void 0, void 0, function () {
+                                return __generator(this, function (_a) {
+                                    switch (_a.label) {
+                                        case 0:
+                                            helperFunctions_1.logger.error("".concat(e, " Current Index: ").concat(this.currentIndex, " - Scraped Followers: ").concat(this.followers.length));
+                                            return [4 /*yield*/, (0, helperFunctions_1.delay)(3500)];
+                                        case 1:
+                                            _a.sent();
+                                            return [4 /*yield*/, this.getFollowers()];
+                                        case 2:
+                                            _a.sent();
+                                            return [2 /*return*/];
+                                    }
+                                });
+                            }); })];
                     case 1:
-                        _a.sent();
-                        return [3 /*break*/, 3];
+                        _b.sent();
+                        return [3 /*break*/, 5];
                     case 2:
-                        error_2 = _a.sent();
-                        helperFunctions_1.logger.error(error_2);
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
+                        _a = _b.sent();
+                        helperFunctions_1.logger.error("Current Index: ".concat(this.currentIndex, " - Scraped Followers: ").concat(this.followers.length));
+                        return [4 /*yield*/, (0, helperFunctions_1.delay)(3500)];
+                    case 3:
+                        _b.sent();
+                        return [4 /*yield*/, this.getFollowers()];
+                    case 4:
+                        _b.sent();
+                        return [3 /*break*/, 5];
+                    case 5: return [2 /*return*/];
                 }
             });
         });
     };
     InstagramScraper.prototype.getFollowing = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var config, error_3;
+            var config, _a;
             var _this = this;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
+            return __generator(this, function (_b) {
+                switch (_b.label) {
                     case 0:
-                        _a.trys.push([0, 2, , 3]);
+                        _b.trys.push([0, 2, , 5]);
                         if (this.currentIndex === undefined) {
                             return [2 /*return*/];
                         }
@@ -257,12 +278,15 @@ var InstagramScraper = /** @class */ (function () {
                                                 });
                                             }
                                             helperFunctions_1.logger.info("Current Index: ".concat(this.currentIndex, " - Scraped Following: ").concat(this.following.length));
-                                            if (!(this.currentIndex != 0)) return [3 /*break*/, 2];
-                                            return [4 /*yield*/, this.getFollowing()];
+                                            if (!(this.currentIndex != 0)) return [3 /*break*/, 3];
+                                            return [4 /*yield*/, (0, helperFunctions_1.delay)(1500)];
                                         case 1:
                                             _b.sent();
-                                            _b.label = 2;
+                                            return [4 /*yield*/, this.getFollowing()];
                                         case 2:
+                                            _b.sent();
+                                            _b.label = 3;
+                                        case 3:
                                             if (this.currentIndex === undefined) {
                                                 return [2 /*return*/];
                                             }
@@ -270,17 +294,35 @@ var InstagramScraper = /** @class */ (function () {
                                     }
                                 });
                             }); })
-                                .catch(function (error) {
-                                helperFunctions_1.logger.error(error);
-                            })];
+                                .catch(function (e) { return __awaiter(_this, void 0, void 0, function () {
+                                return __generator(this, function (_a) {
+                                    switch (_a.label) {
+                                        case 0:
+                                            helperFunctions_1.logger.error("".concat(e, " Current Index: ").concat(this.currentIndex, " - Scraped Following: ").concat(this.following.length));
+                                            return [4 /*yield*/, (0, helperFunctions_1.delay)(3500)];
+                                        case 1:
+                                            _a.sent();
+                                            return [4 /*yield*/, this.getFollowers()];
+                                        case 2:
+                                            _a.sent();
+                                            return [2 /*return*/];
+                                    }
+                                });
+                            }); })];
                     case 1:
-                        _a.sent();
-                        return [3 /*break*/, 3];
+                        _b.sent();
+                        return [3 /*break*/, 5];
                     case 2:
-                        error_3 = _a.sent();
-                        helperFunctions_1.logger.error(error_3);
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
+                        _a = _b.sent();
+                        helperFunctions_1.logger.error("Current Index: ".concat(this.currentIndex, " - Scraped Following: ").concat(this.following.length));
+                        return [4 /*yield*/, (0, helperFunctions_1.delay)(3500)];
+                    case 3:
+                        _b.sent();
+                        return [4 /*yield*/, this.getFollowers()];
+                    case 4:
+                        _b.sent();
+                        return [3 /*break*/, 5];
+                    case 5: return [2 /*return*/];
                 }
             });
         });

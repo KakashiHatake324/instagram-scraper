@@ -6,6 +6,10 @@ interface CSVRow {
   [key: string]: string | number | boolean;
 }
 
+export async function delay(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 export function getUserInput(question: string): Promise<string> {
   return new Promise((resolve, reject) => {
     process.stdout.write(question);

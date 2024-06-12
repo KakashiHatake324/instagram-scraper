@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig } from "axios";
-import { iterateDivClasses, logger } from "./helperFunctions";
+import { delay, iterateDivClasses, logger } from "./helperFunctions";
 
 export class InstagramScraper {
   public userName: string;
@@ -121,17 +121,26 @@ export class InstagramScraper {
           );
 
           if (this.currentIndex != 0) {
+            await delay(1500);
             await this.getFollowers();
           }
           if (this.currentIndex === undefined) {
             return;
           }
         })
-        .catch((error) => {
-          logger.error(error);
+        .catch(async (e) => {
+          logger.error(
+            `${e} Current Index: ${this.currentIndex} - Scraped Followers: ${this.followers.length}`
+          );
+          await delay(3500);
+          await this.getFollowers();
         });
-    } catch (error) {
-      logger.error(error);
+    } catch {
+      logger.error(
+        `Current Index: ${this.currentIndex} - Scraped Followers: ${this.followers.length}`
+      );
+      await delay(3500);
+      await this.getFollowers();
     }
   }
 
@@ -193,17 +202,26 @@ export class InstagramScraper {
           );
 
           if (this.currentIndex != 0) {
+            await delay(1500);
             await this.getFollowing();
           }
           if (this.currentIndex === undefined) {
             return;
           }
         })
-        .catch((error) => {
-          logger.error(error);
+        .catch(async (e) => {
+          logger.error(
+            `${e} Current Index: ${this.currentIndex} - Scraped Following: ${this.following.length}`
+          );
+          await delay(3500);
+          await this.getFollowers();
         });
-    } catch (error) {
-      logger.error(error);
+    } catch {
+      logger.error(
+        `Current Index: ${this.currentIndex} - Scraped Following: ${this.following.length}`
+      );
+      await delay(3500);
+      await this.getFollowers();
     }
   }
 }

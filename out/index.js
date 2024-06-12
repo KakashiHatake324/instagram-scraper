@@ -68,17 +68,23 @@ function start() {
                 case 4:
                     _a.sent();
                     helperFunctions_1.logger.info("Total Followers Scraped: ".concat(scraper.followers.length));
+                    if (!(scraper.followers.length > 0)) return [3 /*break*/, 6];
                     return [4 /*yield*/, (0, helperFunctions_1.saveToCSV)(scraper.followers, "followers.csv")];
                 case 5:
                     _a.sent();
+                    _a.label = 6;
+                case 6:
                     scraper.currentIndex = 0;
                     return [4 /*yield*/, scraper.getFollowing()];
-                case 6:
-                    _a.sent();
-                    helperFunctions_1.logger.info("Total Following Scraped: ".concat(scraper.following.length));
-                    return [4 /*yield*/, (0, helperFunctions_1.saveToCSV)(scraper.following, "following.csv")];
                 case 7:
                     _a.sent();
+                    helperFunctions_1.logger.info("Total Following Scraped: ".concat(scraper.following.length));
+                    if (!(scraper.following.length > 0)) return [3 /*break*/, 9];
+                    return [4 /*yield*/, (0, helperFunctions_1.saveToCSV)(scraper.following, "following.csv")];
+                case 8:
+                    _a.sent();
+                    _a.label = 9;
+                case 9:
                     helperFunctions_1.logger.info("Total Followers: ".concat(scraper.followers.length, " - Total Following: ").concat(scraper.following.length));
                     process.exit(1);
                     return [2 /*return*/];
