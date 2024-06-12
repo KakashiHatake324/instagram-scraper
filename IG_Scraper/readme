@@ -1,0 +1,12 @@
+``node20 && npm``
+
+`Install & Run`
+
+``npm install``
+``npm run start``
+
+`In order to run you need to create a file called loginCookies.txt in this folder and paste the login cookies in this format name=value;name2=value2;etc...`
+
+`When you run it will prompt you for the username where you would just put the desired account's username and itll begin the scraping.`
+
+`It would be best to add proxy handling so that rate limits and blocks are limited. Would also help if you had like 100 accounts to use cookies from that way they wont get banned easily.`
