@@ -98,7 +98,7 @@ export class InstagramScraper {
           "user-agent":
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
           "x-asbd-id": "129477",
-          "x-csrftoken": "bDUgLVjrLG948yR5rV0Zot9O4tSDsgfQ",
+          "x-csrftoken": "",
           "x-ig-app-id": "936619743392459",
           "x-ig-www-claim":
             "hmac.AR0l4x8eAXBWHw3kAoyoKGTPv9Usc34bPlv72XAw39uOB2oW",
@@ -179,7 +179,7 @@ export class InstagramScraper {
           "user-agent":
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
           "x-asbd-id": "129477",
-          "x-csrftoken": "bDUgLVjrLG948yR5rV0Zot9O4tSDsgfQ",
+          "x-csrftoken": "",
           "x-ig-app-id": "936619743392459",
           "x-ig-www-claim":
             "hmac.AR0l4x8eAXBWHw3kAoyoKGTPv9Usc34bPlv72XAw39uOB2oW",
